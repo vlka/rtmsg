@@ -1,0 +1,14 @@
+{
+	"name": "vlka/rtmsg",
+	"desc": "test",
+	"authors": [
+		{
+			"name": "vlka",
+			"email": "vladimir_kashkin@bk.ru"
+		}		
+	],
+    "minimum-stability": "stable",
+    "require": {
+		"yiisoft/yii2": "~2.0"
+	}
+}
