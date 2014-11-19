@@ -9,7 +9,6 @@
 	],
     "minimum-stability": "stable",
     "require": {
-		"yiisoft/yii2": "~2.0",
 		"eloquent/composer-npm-bridge": "~2"
 	},
 	"autoload": {
