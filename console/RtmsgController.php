@@ -9,6 +9,6 @@ class RtmsgController extends Controller
 	}
 	
 	public function actionInit(){
-		$test = $this->confirm('Введите тестовое слово');
+		$path = $this->prompt(Yii::t('rtmsg', 'Enter path for node server'));
 	}
 }
