@@ -1,6 +1,7 @@
 <?php
 namespace vlka\rtmsg\console;
 
+use Yii;
 use yii\console\Controller;
 class RtmsgController extends Controller
 {
