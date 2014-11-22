@@ -11,5 +11,6 @@ class RtmsgController extends Controller
 	
 	public function actionInit(){
 		$path = $this->prompt(Yii::t('rtmsg', 'Enter path for node server'));
+		echo $path*3;
 	}
 }
