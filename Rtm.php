@@ -1,6 +1,7 @@
 <?php
 namespace vlka\rtmsg;
 
+use Yii;
 use yii\base\Component;
 class Rtm extends Component
 {

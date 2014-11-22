@@ -1,6 +1,5 @@
 {
     "dependencies": {
-		"http": "~3",
         "socket.io": "~1.2"
     }
 }
