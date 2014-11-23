@@ -11,7 +11,7 @@ class Rtm extends Component implements \yii\base\BootstrapInterface
 	public $node_path = '@app/node_server';
 	
 	public function bootstrap($app) {
-		if(app instanceof \yii\console\Application){
+		if($app instanceof \yii\console\Application){
 			Yii::$app->controllerMap['rtmsg'] = 'vlka\rtmsg\console\RtmsgController';
 		}
 		
