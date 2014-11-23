@@ -8,6 +8,6 @@ class RtmsgController extends Controller
 {
 	public function actionInit(){
 		$rtm = new Rtm();
-		echo $rtm->node_path;
+		echo Yii::getAlias($rtm->node_path);
 	}
 }
