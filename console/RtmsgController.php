@@ -3,14 +3,11 @@ namespace vlka\rtmsg\console;
 
 use Yii;
 use yii\console\Controller;
+use vlka\rtmsg\Rtm;
 class RtmsgController extends Controller
 {
-	public function actionTest(){
-		echo "test 777";
-	}
-	
 	public function actionInit(){
-		$path = $this->prompt(Yii::t('rtmsg', 'Enter path for node server'));
-		echo $path*3;
+		$rtm = new Rtm();
+		echo $rtm->node_path;
 	}
 }
