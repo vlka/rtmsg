@@ -7,7 +7,7 @@ class Rtm extends Component implements \yii\base\BootstrapInterface
 {
 	public $node_host;
 	public $node_port;
-	public $node_path = '@webroot/node_server';
+	public $node_path = '@app/node_server';
 	
 	public function bootstrap($app) {
 		if(app instanceof \yii\console\Application){
