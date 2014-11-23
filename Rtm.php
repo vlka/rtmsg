@@ -6,9 +6,16 @@ use yii\helpers\Html;
 use yii\base\Component;
 class Rtm extends Component implements \yii\base\BootstrapInterface
 {
-	public $node_host;
+	public $node_host = null;
 	public $node_port = 3000;
 	public $node_path = '@app/node_server';
+	
+	public function init() {
+		parent::init();
+		if(!$this->node_host){
+			$this->node_host = Yii::$app->urlManager->createAbsoluteUrl(['/']);
+		}
+	}
 	
 	public function bootstrap($app) {
 		if($app instanceof \yii\console\Application){
