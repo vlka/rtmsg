@@ -2,6 +2,7 @@
 namespace vlka\rtmsg;
 
 use Yii;
+use yii\helpers\Html;
 use yii\base\Component;
 class Rtm extends Component implements \yii\base\BootstrapInterface
 {
@@ -23,8 +24,11 @@ class Rtm extends Component implements \yii\base\BootstrapInterface
 	}
 
 	public function register($messages = null){
-		echo '<pre>';
-		print_r($messages);
-		echo '</pre>';
+		$view = Yii::$app->view;
+		$view->registerJsFile($this->node_host . ':' . $this->node_port . '/socket.io/socket.io.js');
+		$view->registerJs(<<<JS
+			alert(1);
+JS
+		);
 	}
 }

@@ -7,7 +7,7 @@ app.listen(conf.port);
 
 function handler (req, res) {
 	res.writeHead(200);
-	res.end("Запрос");
+	res.end("Ok");
 }
 
 io.on('connection', function (socket) {
