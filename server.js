@@ -5,7 +5,7 @@ var fs = require('fs');
 
 console.log(conf);
 
-app.listen(conf);
+app.listen(conf.port);
 
 function handler (req, res) {
 	res.writeHead(200);

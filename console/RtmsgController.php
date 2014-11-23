@@ -9,7 +9,10 @@ class RtmsgController extends Controller
 {
 	public function actionInit(){
 		$rtm = new Rtm();
-		exec('cp -rf ' . Yii::getAlias('@vendor/vlka/rtmsg/node_modules') . ' ' . Yii::getAlias($rtm->node_path));
+		if(file_exists(Yii::getAlias('@vendor/vlka/rtmsg/node_modules'))){
+			exec('rm -R ' . Yii::getAlias('@vendor/vlka/rtmsg/node_modules'));
+		}
+		exec('cp -R ' . Yii::getAlias('@vendor/vlka/rtmsg/node_modules') . ' ' . Yii::getAlias($rtm->node_path));
 		exec('cp ' . Yii::getAlias('@vendor/vlka/rtmsg/server.js') . ' ' . Yii::getAlias($rtm->node_path));
 		$conf = 'exports.port = ' . $rtm->node_port . ";\n";
 		file_put_contents(Yii::getAlias($rtm->node_path) . '/conf.js', $conf);
