@@ -8,6 +8,7 @@ class RtmsgController extends Controller
 {
 	public function actionInit(){
 		$rtm = new Rtm();
-		echo Yii::getAlias($rtm->node_path);
+		mkdir(Yii::getAlias($rtm->node_path));
+		exec('cp -R '.Yii::getAlias('@vendor/vlka/rtmsg/node_modules').' '.Yii::getAlias($rtm->node_path));
 	}
 }
