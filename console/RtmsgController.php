@@ -8,7 +8,10 @@ class RtmsgController extends Controller
 {
 	public function actionInit(){
 		$rtm = new Rtm();
-		mkdir(Yii::getAlias($rtm->node_path));
-		exec('cp -R '.Yii::getAlias('@vendor/vlka/rtmsg/node_modules').' '.Yii::getAlias($rtm->node_path));
+//		if(file_exists($this->node_path)){
+//			exec('rm -R '.Yii::getAlias($rtm->node_path));
+//		}
+//		mkdir(Yii::getAlias($rtm->node_path));
+		exec('cp -rf '.Yii::getAlias('@vendor/vlka/rtmsg/node_modules').' '.Yii::getAlias($rtm->node_path));
 	}
 }
