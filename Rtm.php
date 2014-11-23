@@ -27,7 +27,7 @@ class Rtm extends Component implements \yii\base\BootstrapInterface
 		$view = Yii::$app->view;
 		$view->registerJsFile($this->node_host . ':' . $this->node_port . '/socket.io/socket.io.js');
 		$view->registerJs(<<<JS
-			alert(1);
+			alert($message);
 JS
 		);
 	}
