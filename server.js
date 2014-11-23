@@ -2,7 +2,7 @@ var conf = require('conf');
 var app = require('http').createServer(handler);
 var io = require('socket.io')(app);
 var fs = require('fs');
-
+console.log(conf);
 app.listen(conf.port);
 
 function handler (req, res) {
