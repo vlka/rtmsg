@@ -13,7 +13,7 @@ class Rtm extends Component implements \yii\base\BootstrapInterface
 	public function init() {
 		parent::init();
 		if(Yii::$app instanceof \yii\web\Application && !$this->node_host){
-			$this->node_host = Yii::$app->urlManager->createAbsoluteUrl(['/']);
+			$this->node_host = Yii::$app->request->hostInfo;
 		}
 	}
 	
