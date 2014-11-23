@@ -1,8 +1,9 @@
-var app = require('http').createServer(handler)
+var conf = require('conf');
+var app = require('http').createServer(handler);
 var io = require('socket.io')(app);
 var fs = require('fs');
 
-app.listen(3333);
+app.listen(conf.port);
 
 function handler (req, res) {
 	res.writeHead(200);
