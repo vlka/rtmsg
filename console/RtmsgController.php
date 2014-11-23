@@ -18,4 +18,9 @@ class RtmsgController extends Controller
 		$conf = 'exports.port = ' . $rtm->node_port . ";\n";
 		file_put_contents(Yii::getAlias($rtm->node_path) . '/conf.js', $conf);
 	}
+	
+	public function actionStart(){
+		$rtm = new Rtm();
+		exec('supervisor --nodejs ' . $rtm->node_path . '/server.js');
+	}
 }
