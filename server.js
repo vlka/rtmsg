@@ -3,8 +3,6 @@ var app = require('http').createServer(handler);
 var io = require('socket.io')(app);
 var fs = require('fs');
 
-console.log(conf);
-
 app.listen(conf.port);
 
 function handler (req, res) {
@@ -24,3 +22,5 @@ io.on('connection', function (socket) {
 		console.log(data);
 	});
 });
+
+console.log('Server start from port ' + conf.port + "\n");
