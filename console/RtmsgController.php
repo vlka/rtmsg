@@ -21,6 +21,6 @@ class RtmsgController extends Controller
 	
 	public function actionStart(){
 		$rtm = new Rtm();
-		exec('supervisor --nodejs ' . $rtm->node_path . '/server.js');
+		exec('nodejs ' . $rtm->node_path . '/server.js');
 	}
 }
